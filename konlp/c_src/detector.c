@@ -282,7 +282,7 @@ static struct PyModuleDef moduledef = {
 MOD_INIT(codescan){
     PyObject* m;
 
-    MOD_DEF(m, "konltk.c.codescan", "detector c code", methods);
+    MOD_DEF(m, "konlp.c.codescan", "detector c code", methods);
 
     if (m == NULL)
         return MOD_ERROR_VAL;

@@ -1,4 +1,4 @@
-import konltk.c.codescan as D
+import konlp.c.codescan as D
 
 
 class Detect:
