@@ -14,16 +14,19 @@ class Ngram:
 
 		for i in range(len(word_list) - (n - 1)):
     		# progress(len(word_list), i)
-			temp_str = ""
+			# temp_str = ""
+			temp_list = []
 			for j in range(n):
-				temp_str += word_list[i + j]
-				temp_str += " "
+				# temp_str += word_list[i + j]
+				# temp_str += " "
+				temp_list.append(word_list[i + j])
 
+			temp_tuple = tuple(temp_list)
 			num = 1
-			if di.get(temp_str):
-				num = di.get(temp_str) + 1
+			if di.get(temp_tuple):
+				num = di.get(temp_tuple) + 1
 
-			di.update({temp_str: num})
+			di.update({temp_tuple: num})
 
 		return di
 	
