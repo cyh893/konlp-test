@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../c_src/header.h"
 
 typedef enum { NONE, EUCKR, UTF8, UTF16BE, UTF16LE } CODETYPE;
 
@@ -149,7 +149,7 @@ int utf16le(int idx){
     if(len - 2 < idx){
         return 0;
     }
-
+    
     t2 = text[idx] & 0xff;
     t1 = text[idx + 1] & 0xff;
 
